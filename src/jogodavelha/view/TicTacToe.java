@@ -1,4 +1,4 @@
-package jogodavelha;
+package jogodavelha.view;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

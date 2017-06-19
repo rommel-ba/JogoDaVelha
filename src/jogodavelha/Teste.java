@@ -5,7 +5,7 @@
  */
 package jogodavelha;
 
-import redis.clients.jedis.Jedis;
+import jogodavelha.controller.JediPublisher;
 
 /**
  *
@@ -30,8 +30,7 @@ public class Teste {
 
 //          JediSubscriber sub = new JediSubscriber();
 //          sub.setupSubscriber();
-          JediPublisher pub = new JediPublisher();
-          pub.setupPublisher();
+          JediPublisher pub = new JediPublisher("Localhost");
     }
     
 }
