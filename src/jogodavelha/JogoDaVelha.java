@@ -9,6 +9,8 @@ import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -20,8 +22,12 @@ public class JogoDaVelha extends Application {
     private List<Combo> combos = new ArrayList<>();
     
     private Parent createContent(){
-        Pane root = new Pane();
-        root.setPrefSize(600,600);
+        BorderPane root = new BorderPane();
+        root.setPrefSize(600,640);
+        
+        Label label = new Label();
+        label.setText("Label");
+        root.setBottom(label);
         
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 3; j++){

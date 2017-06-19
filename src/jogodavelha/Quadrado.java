@@ -2,6 +2,7 @@ package jogodavelha;
 
 import java.util.ArrayList;
 import java.util.List;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
@@ -10,6 +11,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextBoundsType;
 
 /**
  *
@@ -21,7 +23,8 @@ public class Quadrado extends StackPane {
     public boolean jogaX = true;
     private Combo combo;
     private List<Combo> combos = new ArrayList<>();
-    private Text texto = new Text();     
+    private Text texto = new Text();
+    
     
     public Quadrado(){
         
@@ -30,9 +33,10 @@ public class Quadrado extends StackPane {
        borda.setStroke(Color.BLACK);
 
        
-       texto.setFont(Font.font(72));
+       texto.setFont(Font.font(230));
        
-       setAlignment(Pos.CENTER);
+       setAlignment(Pos.BASELINE_LEFT);
+       
        getChildren().addAll(borda, texto);
        
        setOnMouseClicked(event -> {
